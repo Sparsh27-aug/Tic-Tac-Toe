@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
             if (gameState[winPosition[0]] == gameState[winPosition[1]] &&
                     gameState[winPosition[1]] == gameState[winPosition[2]] &&
                     gameState[winPosition[0]] != 2) {
-                // Somebody has won! - Find out who!
+                //  If somebody has won! - Find out who!
                 String winnerStr;
                 gameActive = false;
                 if (gameState[winPosition[0]] == 0) {
@@ -67,7 +67,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    public void gameReset(View view) {
+
+    public int gameReset(View view) {
         gameActive = true;
         activePlayer = 0;
         for(int i=0; i<gameState.length; i++){
@@ -85,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView status = findViewById(R.id.status);
         status.setText("X's Turn - Tap to play");
+        return 0;
 
     }
 
