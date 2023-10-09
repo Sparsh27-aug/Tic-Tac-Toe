@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             }
             img.animate().translationYBy(1000f).setDuration(300);
         }
-        // Check if any player has won
+        // Check if any player has won the game
         for(int[] winPosition: winPositions) {
             if (gameState[winPosition[0]] == gameState[winPosition[1]] &&
                     gameState[winPosition[1]] == gameState[winPosition[2]] &&
